@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deduplication Results</title>
+</head>
+<body>
+    <h1>Deduplication Results</h1>
+    {% if download_path %}
+        <p>Deduplication successful! Download your results:</p>
+        <a href="{{ url_for('download_temp_out_file') }}" download>Download Deduplicated File</a>
+    {% else %}
+        <p>No deduplicated results available.</p>
+    {% endif %}
+
+    {% if duplicates_download_path %}
+        <p>Download duplicate records:</p>
+        <a href="{{ url_for('download_temp_out_file') }}" download>Download Duplicates File</a>
+    {% else %}
+        <p>No duplicate records available for download.</p>
+    {% endif %}
+    
+    <!-- Debugging Information -->
+    <p>Debugging Information:</p>
+    <p>download_path: {{ download_path }}</p>
+    <p>duplicates_download_path: {{ duplicates_download_path }}</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+pandas
+dedupe
+Unidecode
+openpyxl
+pyarrow
+fuzzywuzzy
+python-Levenshtein
+flask
+jinja2
+scikit-learn==1.1.3
+sqlalchemy 
+psycopg2-binary

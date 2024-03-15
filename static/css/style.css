@@ -1,0 +1,9 @@
+.upload-section,
+.db-connection-section {
+    display: none;
+}
+
+#loading-upload,
+#loading-db {
+    display: none;
+}

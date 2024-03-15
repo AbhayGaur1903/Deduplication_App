@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload File & Database Connection</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+
+<body>
+    <h1>Upload File & Database Connection</h1>
+
+    <!-- Radio buttons to choose between file upload and database connection -->
+    <input type="radio" name="section" value="upload" onclick="showSection('upload')"> Upload File
+    <input type="radio" name="section" value="db" onclick="showSection('db')"> Database Connection
+
+    <!-- File Upload Section -->
+    <div id="upload-section" class="upload-section">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file">
+            <input type="button" id="uploadBtn" value="Upload" onclick="handleFileUpload()">
+            <div id="loading-upload">Uploading...</div>
+        </form>
+        <div id="upload-feedback"></div>
+    </div>
+
+    <!-- Database Connection Section -->
+    <div id="db-connection-section" class="db-connection-section">
+        <form>
+            <input type= "text" id ="dbtype" placeholder = "Database Type">
+            <input type="text" id="dbname" name="dbname" placeholder="Database Name">
+            <input type="text" id="user" name="user" placeholder="Username">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="text" id="host" name="host" placeholder="Host">
+            <input type="text" id="port" name="port" placeholder="Port">
+            <input type="text" id="confidence" name="confidence" placeholder="Confidence Threshold">
+            <input type="text" id="tablename" name="tablename" placeholder="Table Name">
+            <input type="text" id="candidatename" name="candidatename" placeholder="Candidate Name">
+            <input type="text" id="fathername" name="fathername" placeholder="Father Name">
+            <input type="text" id="mothername" name="mothername" placeholder="Mother Name">
+
+            <input type="button" id="connectBtn" value="Connect" onclick="handleDBConnection()">
+            <div id="loading-db">Connecting...</div>
+        </form>
+        <div id="db-feedback"></div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>

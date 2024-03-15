@@ -1,0 +1,7 @@
+venv/
+temp/
+uploads/
+duplicates_output.csv
+learned_settings
+training.json
+dedupe.log
